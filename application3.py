@@ -1,6 +1,6 @@
 def chebyshev_distance(p1, p2):
     """Calcule la distance de Chebyshev entre deux points.
-#Troisième methode
+#Deuxième methode
     
 def chebyshev_distance(p1, p2):
     """Calcule la distance de Chebyshev entre deux points.
@@ -16,7 +16,7 @@ def chebyshev_distance(p1, p2):
     if len(p1) != len(p2):
         raise ValueError("Les deux points doivent avoir la même dimension.")
 
-    differences = list(map(lambda x, y: abs(x - y), p1, p2))
+    differences = [abs(x - y) for x, y in zip(p1, p2)]
     distance = max(differences)
 
     return distance
